@@ -10,8 +10,8 @@
 ]>
 
 <targetDefinitions>
-  <board id="niechdzialaplz">
-    <name>niechdzialaplz</name>
+  <board id="2019_ledvisualiser">
+    <name>2019_LEDvisualiser</name>
     <dbgIF>SWD</dbgIF>
     <dbgDEV>ST-Link</dbgDEV>
     <mcuId>stm32f407vgtx</mcuId>

@@ -50,7 +50,6 @@
 #include "main.h"
 #include "stm32f4xx_hal.h"
 #include "usb_device.h"
-#include "max_driver.h"
 #include "math.h"
 
 /* USER CODE BEGIN Includes */
@@ -126,7 +125,6 @@ void setled(uint8_t row, uint8_t col, uint8_t value)
 			write_byte(0);
 		}
 	}
-	HAL_GPIO_WritePin(maxport, cs_Pin, 0);  // Set CS pin - LOW
 	HAL_GPIO_WritePin(maxport, cs_Pin, 1);  // Set CS pin - HIGH
 }
 
@@ -262,8 +260,8 @@ int main(void)
 
 	  if(ReceivedDataFlag == 1) // When data has been received
 	  {
-	  	MessageLength = sprintf(DataToSend, "Received: %s\n\r", ReceivedData); // Combine message, which is going to be sent as an echo
-	  	CDC_Transmit_FS(DataToSend, MessageLength); // Send Echo through USB port
+	  	//MessageLength = sprintf(DataToSend, "Received: %s\n\r", ReceivedData); // Combine message, which is going to be sent as an echo
+	  	//CDC_Transmit_FS(DataToSend, MessageLength); // Send Echo through USB port
 	  	max_refresh(); // Refresh the LED display, while received data
 	  	ReceivedDataFlag = 0; // Setting the flag value to 0, until another chunk of data will be received
 	  }
