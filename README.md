@@ -14,7 +14,8 @@ wyświetlacza.
 
 # TomFrom LED Visualizer  
   
-W folderze o nazwie 'TomFrom' znajduje sie program (wraz z potrzebnymi
+W folderze o nazwie 'TomFrom_app' znajduje sie program (wraz z 
+potrzebnymi
 do uruchomienia zasobami), który pozwala na przechwycenie sygnału
 z karty dzwiękowej oraz jego spektralną analizę. Jej wynik zostaje
 przesłany w postaci bajtów przez wybrany w programie port szeregowy,
